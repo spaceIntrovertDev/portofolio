@@ -1,8 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { Github, ExternalLink, Code2, Database, MessageSquare, Lock, Layers } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Github, ExternalLink, Code2, Database, MessageSquare, Lock, Layers, X } from "lucide-react";
 
 export default function Projects() {
+    const [modalImage, setModalImage] = useState<string | null>(null);
+
+    // Close modal on Esc key
+    useEffect(() => {
+        const handleEsc = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setModalImage(null);
+        };
+        window.addEventListener("keydown", handleEsc);
+        return () => window.removeEventListener("keydown", handleEsc);
+    }, []);
+
     return (
         <div className="flex h-full w-full flex-col items-center justify-center px-6 py-12 md:px-12">
             <article className="w-full max-w-3xl space-y-12 rounded-lg bg-white p-8 shadow-lg dark:bg-black">
@@ -60,7 +74,10 @@ export default function Projects() {
                     </ul>
 
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        <div className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+                        <div
+                            className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
+                            onClick={() => setModalImage("/projects/twitter-dashboard.png")}
+                        >
                             <Image
                                 src="/projects/twitter-dashboard.png"
                                 alt="Twitter Analysis Dashboard"
@@ -69,10 +86,13 @@ export default function Projects() {
                                 className="h-full w-full object-cover transition-transform hover:scale-105"
                             />
                         </div>
-                        <div className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+                        <div
+                            className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
+                            onClick={() => setModalImage("/projects/twitter-parser.png")}
+                        >
                             <Image
-                                src="/projects/twitter-parser.png"
-                                alt="Twitter Parser Interface"
+                                src="/projects/twitter-result.png"
+                                alt="Twitter Result"
                                 width={600}
                                 height={400}
                                 className="h-full w-full object-cover transition-transform hover:scale-105"
@@ -127,7 +147,10 @@ export default function Projects() {
                         </li>
                     </ul>
 
-                    <div className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+                    <div
+                        className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
+                        onClick={() => setModalImage("/projects/chatbot-vscode.png")}
+                    >
                         <Image
                             src="/projects/chatbot-vscode.png"
                             alt="Chatbot in VS Code"
@@ -186,7 +209,10 @@ export default function Projects() {
                     </ul>
 
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        <div className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+                        <div
+                            className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
+                            onClick={() => setModalImage("/projects/sales-login.png")}
+                        >
                             <Image
                                 src="/projects/sales-login.png"
                                 alt="Login Page"
@@ -195,7 +221,10 @@ export default function Projects() {
                                 className="h-full w-full object-cover transition-transform hover:scale-105"
                             />
                         </div>
-                        <div className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
+                        <div
+                            className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
+                            onClick={() => setModalImage("/projects/sales-dashboard.png")}
+                        >
                             <Image
                                 src="/projects/sales-dashboard.png"
                                 alt="Leads Dashboard"
@@ -207,6 +236,33 @@ export default function Projects() {
                     </div>
                 </section>
             </article>
+
+            {/* Modal Overlay */}
+            {modalImage && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+                    onClick={() => setModalImage(null)} // Close on overlay click
+                >
+                    <div
+                        className="relative max-h-[90vh] max-w-[90vw] overflow-auto rounded-lg bg-white p-4 shadow-xl dark:bg-gray-900"
+                        onClick={(e) => e.stopPropagation()} // Prevent close on inner click
+                    >
+                        <button
+                            className="absolute right-2 top-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                            onClick={() => setModalImage(null)}
+                        >
+                            <X className="h-6 w-6" />
+                        </button>
+                        <Image
+                            src={modalImage}
+                            alt="Enlarged Project Image"
+                            width={1200}
+                            height={800}
+                            className="h-auto w-auto max-h-[80vh] max-w-[80vw] object-contain"
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
