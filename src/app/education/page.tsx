@@ -4,14 +4,11 @@ export default function Education() {
     return (
         <div className="flex h-full w-full flex-col items-center justify-center px-6 py-12 md:px-12">
             <article className="w-full max-w-3xl space-y-10 rounded-lg bg-white p-8 shadow-lg dark:bg-black">
-                {/* Page Title */}
                 <header className="border-b border-gray-200 pb-6 dark:border-gray-700">
                     <h1 className="text-center text-3xl font-bold text-gray-900 dark:text-white sm:text-left">
                         Education
                     </h1>
                 </header>
-
-                {/* Degree */}
                 <section>
                     <div className="flex items-start gap-3">
                         <GraduationCap className="h-6 w-6 text-blue-600 dark:text-blue-400 mt-1" />
@@ -30,14 +27,11 @@ export default function Education() {
                             </p>
                         </div>
                     </div>
-
-                    {/* Projects during Studies */}
                     <div className="mt-8 space-y-6">
                         <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
                             <BookOpen className="h-5 w-5 text-green-600 dark:text-green-400" />
                             Projects during Studies
                         </h3>
-
                         <div className="space-y-5">
                             <div>
                                 <h4 className="font-medium text-gray-900 dark:text-white">
@@ -51,7 +45,6 @@ export default function Education() {
                                     <li>Twitter Parser (analysis environment with sample evaluations)</li>
                                 </ul>
                             </div>
-
                             <div className="border-t border-gray-200 pt-5 dark:border-gray-700">
                                 <h4 className="font-medium text-gray-900 dark:text-white">
                                     Development of a Chatbot to Support Programmers

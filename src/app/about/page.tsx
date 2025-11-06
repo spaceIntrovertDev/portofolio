@@ -6,17 +6,14 @@ export default function AboutPortfolio() {
     return (
         <div className="flex h-full w-full flex-col items-center justify-center px-6 py-12 md:px-12">
             <article className="w-full max-w-3xl space-y-12 rounded-lg bg-white p-8 shadow-lg dark:bg-black">
-                {/* Page Header */}
                 <header className="border-b border-gray-200 pb-6 dark:border-gray-700">
                     <h1 className="text-center text-3xl font-bold text-gray-900 dark:text-white sm:text-left">
                         About This Portfolio
                     </h1>
                     <p className="mt-2 text-center text-base text-gray-600 dark:text-gray-400 sm:text-left">
-                        How this site was built — technology, design, and philosophy.
+                        How this site was built — technology, design and philosophy.
                     </p>
                 </header>
-
-                {/* Development Approach */}
                 <section className="space-y-6">
                     <div className="flex items-start gap-3">
                         <Lightbulb className="h-6 w-6 text-yellow-600 dark:text-yellow-400 mt-0.5" />
@@ -25,8 +22,8 @@ export default function AboutPortfolio() {
                                 Development Philosophy
                             </h2>
                             <p className="mt-2 text-base leading-relaxed text-gray-700 dark:text-gray-300">
-                                This portfolio was built with a focus on <strong>clarity, performance, and maintainability</strong>.
-                                The goal was to create a clean, professional, and fast-loading personal site that reflects
+                                This portfolio was built with a focus on <strong>clarity, performance and maintainability</strong>.
+                                The goal was to create a clean, professional and fast-loading personal site that reflects
                                 my technical expertise while being easy to update and extend.
                             </p>
                             <ul className="mt-3 space-y-2 text-sm text-gray-600 dark:text-gray-400">
@@ -46,18 +43,13 @@ export default function AboutPortfolio() {
                         </div>
                     </div>
                 </section>
-
                 <hr className="border-gray-200 dark:border-gray-700" />
-
-                {/* Tech Stack */}
                 <section className="space-y-6">
                     <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white">
                         <Terminal className="h-6 w-6 text-green-600 dark:text-green-400" />
                         Technology Stack
                     </h2>
-
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                        {/* Frontend */}
                         <div className="rounded-lg border border-gray-200 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-900">
                             <div className="flex items-center gap-2">
                                 <Globe className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -71,8 +63,6 @@ export default function AboutPortfolio() {
                                 <li>next/image (optimized images)</li>
                             </ul>
                         </div>
-
-                        {/* Deployment */}
                         <div className="rounded-lg border border-gray-200 bg-gray-50 p-5 dark:border-gray-700 dark:bg-gray-900">
                             <div className="flex items-center gap-2">
                                 <Code2 className="h-5 w-5 text-purple-600 dark:text-purple-400" />
@@ -86,10 +76,7 @@ export default function AboutPortfolio() {
                         </div>
                     </div>
                 </section>
-
                 <hr className="border-gray-200 dark:border-gray-700" />
-
-                {/* Design System */}
                 <section className="space-y-6">
                     <div className="flex items-start gap-3">
                         <Palette className="h-6 w-6 text-pink-600 dark:text-pink-400 mt-0.5" />
@@ -117,36 +104,7 @@ export default function AboutPortfolio() {
                         </div>
                     </div>
                 </section>
-
                 <hr className="border-gray-200 dark:border-gray-700" />
-
-                {/* Future Improvements */}
-                <section className="space-y-4">
-                    <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white">
-                        <Lightbulb className="h-6 w-6 text-orange-600 dark:text-orange-400" />
-                        Future Enhancements
-                    </h2>
-                    <ul className="space-y-2 text-base text-gray-700 dark:text-gray-300">
-                        <li className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-blue-600"></span>
-                            Add blog section with MDX support
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-blue-600"></span>
-                            Integrate analytics (Vercel Analytics or Umami)
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-blue-600"></span>
-                            Add project filtering and search
-                        </li>
-                        <li className="flex items-start gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-blue-600"></span>
-                            Multilingual support (i18n)
-                        </li>
-                    </ul>
-                </section>
-
-                {/* Closing */}
                 <footer className="pt-6 text-center text-sm text-gray-500 dark:text-gray-400">
                     {`Built with care by Philipp Wiedemann — ${currentYear}`}
                 </footer>

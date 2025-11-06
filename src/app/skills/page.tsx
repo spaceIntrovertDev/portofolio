@@ -4,17 +4,14 @@ export default function Skills() {
     return (
         <div className="flex h-full w-full flex-col items-center justify-center px-6 py-12 md:px-12">
             <article className="w-full max-w-3xl space-y-10 rounded-lg bg-white p-8 shadow-lg dark:bg-black">
-                {/* Page Title */}
                 <header className="border-b border-gray-200 pb-6 dark:border-gray-700">
                     <h1 className="text-center text-3xl font-bold text-gray-900 dark:text-white sm:text-left">
                         Skills & Expertise
                     </h1>
                     <p className="mt-2 text-center text-base text-gray-600 dark:text-gray-400 sm:text-left">
-                        Technologies, frameworks, and tools from professional and academic experience
+                        Technologies, frameworks and tools from professional & academic experience
                     </p>
                 </header>
-
-                {/* Programming Languages */}
                 <section>
                     <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white">
                         <Code2 className="h-6 w-6 text-blue-600 dark:text-blue-400"/>
@@ -24,13 +21,13 @@ export default function Skills() {
                         <div>
                             <h3 className="font-medium text-green-700 dark:text-green-400">Advanced</h3>
                             <p className="mt-1 text-base text-gray-700 dark:text-gray-300">
-                                Python, TypeScript, PHP
+                                Python, TypeScript/JavaScript, PHP
                             </p>
                         </div>
                         <div>
                             <h3 className="font-medium text-yellow-700 dark:text-yellow-400">Good Knowledge</h3>
                             <p className="mt-1 text-base text-gray-700 dark:text-gray-300">
-                                JavaScript, Unix/Linux (Shell/Bash), Batch (Windows), HTML
+                                Unix/Linux Shell (Bash), Windows Batch, HTML, CSS
                             </p>
                         </div>
                         <div>
@@ -41,8 +38,6 @@ export default function Skills() {
                         </div>
                     </div>
                 </section>
-
-                {/* Frameworks & Libraries */}
                 <section className="border-t border-gray-200 pt-8 dark:border-gray-700">
                     <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white">
                         <Layers className="h-6 w-6 text-indigo-600 dark:text-indigo-400"/>
@@ -69,8 +64,6 @@ export default function Skills() {
                         </div>
                     </div>
                 </section>
-
-                {/* Technical Skills & Tools */}
                 <section className="border-t border-gray-200 pt-8 dark:border-gray-700">
                     <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white">
                         <Cpu className="h-6 w-6 text-purple-600 dark:text-purple-400"/>
@@ -87,7 +80,6 @@ export default function Skills() {
                                     </p>
                                 </div>
                             </div>
-
                             <div className="flex items-center gap-2">
                                 <TestTube className="h-5 w-5 text-indigo-600 dark:text-indigo-400"/>
                                 <div>
@@ -97,7 +89,6 @@ export default function Skills() {
                                     </p>
                                 </div>
                             </div>
-
                             <div className="flex items-center gap-2">
                                 <GitBranch className="h-5 w-5 text-green-600 dark:text-green-400"/>
                                 <div>
@@ -108,7 +99,6 @@ export default function Skills() {
                                 </div>
                             </div>
                         </div>
-
                         <div className="space-y-3">
                             <div className="flex items-center gap-2">
                                 <Globe className="h-5 w-5 text-pink-600 dark:text-pink-400"/>
@@ -119,7 +109,6 @@ export default function Skills() {
                                     </p>
                                 </div>
                             </div>
-
                             <div className="flex items-center gap-2">
                                 <Cpu className="h-5 w-5 text-orange-600 dark:text-orange-400"/>
                                 <div>
@@ -132,16 +121,13 @@ export default function Skills() {
                         </div>
                     </div>
                 </section>
-
-                {/* Soft Skills */}
                 <section className="border-t border-gray-200 pt-8 dark:border-gray-700">
                     <h2 className="flex items-center gap-2 text-xl font-semibold text-gray-900 dark:text-white">
                         <Brain className="h-6 w-6 text-red-600 dark:text-red-400"/>
                         Soft Skills
                     </h2>
                     <p className="mt-3 text-base leading-relaxed text-gray-700 dark:text-gray-300">
-                        Disciplined, quick learner, solution-oriented approach, responsible, helpful, eager to learn,
-                        ambitious
+                        Disciplined, quick learner, solution-oriented approach, responsible, eager to learn, ambitious
                     </p>
                 </section>
             </article>

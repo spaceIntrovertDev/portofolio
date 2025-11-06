@@ -8,10 +8,9 @@ import { Github, ExternalLink, Code2, Database, MessageSquare, Lock, Layers, X }
 export default function Projects() {
     const [modalImage, setModalImage] = useState<string | null>(null);
 
-    // Close modal on Esc key
     useEffect(() => {
-        const handleEsc = (e: KeyboardEvent) => {
-            if (e.key === "Escape") setModalImage(null);
+        const handleEsc = (keyboardEvent: KeyboardEvent) => {
+            if (keyboardEvent.key === "Escape") setModalImage(null);
         };
         window.addEventListener("keydown", handleEsc);
         return () => window.removeEventListener("keydown", handleEsc);
@@ -28,8 +27,6 @@ export default function Projects() {
                         Academic and self-directed learning projects showcasing full-stack development
                     </p>
                 </header>
-
-                {/* Project 1: Twitter Analysis (Academic) */}
                 <section className="space-y-6">
                     <div className="flex items-start justify-between">
                         <div>
@@ -51,9 +48,8 @@ export default function Projects() {
 
                     <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
                         A full-stack data pipeline for analyzing Twitter (X) data with custom weighting schemes.
-                        Includes crawling, database migration, re-crawling logic, and interactive analysis dashboard.
+                        Includes crawling, database migration, re-crawling logic and interactive analysis dashboard.
                     </p>
-
                     <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                         <li className="flex items-center gap-2">
                             <Database className="h-4 w-4 text-green-600 dark:text-green-400" />
@@ -72,7 +68,6 @@ export default function Projects() {
                             Twitter Parser with Sample Evaluations
                         </li>
                     </ul>
-
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div
                             className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
@@ -100,10 +95,7 @@ export default function Projects() {
                         </div>
                     </div>
                 </section>
-
                 <hr className="border-gray-200 dark:border-gray-700" />
-
-                {/* Project 2: Programmer Chatbot (Academic) */}
                 <section className="space-y-6">
                     <div className="flex items-start justify-between">
                         <div>
@@ -122,12 +114,10 @@ export default function Projects() {
                             <Github className="h-5 w-5" />
                         </Link>
                     </div>
-
                     <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
                         A cross-platform assistant for developers integrated into VS Code.
-                        Analyzes code context, searches documentation, and provides instant help via natural language.
+                        Analyzes code context, searches documentation and provides instant help via natural language.
                     </p>
-
                     <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                         <li className="flex items-center gap-2">
                             <Code2 className="h-4 w-4 text-green-600 dark:text-green-400" />
@@ -146,7 +136,6 @@ export default function Projects() {
                             Text Mining & Result Ranking
                         </li>
                     </ul>
-
                     <div
                         className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
                         onClick={() => setModalImage("/projects/chatbot-vscode.png")}
@@ -160,10 +149,7 @@ export default function Projects() {
                         />
                     </div>
                 </section>
-
                 <hr className="border-gray-200 dark:border-gray-700" />
-
-                {/* Project 3: Sales Dashboard (Self-Learning) */}
                 <section className="space-y-6">
                     <div className="flex items-start justify-between">
                         <div>
@@ -182,13 +168,11 @@ export default function Projects() {
                             <Github className="h-5 w-5" />
                         </Link>
                     </div>
-
                     <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
                         A full-stack, multi-tenant sales dashboard with secure login.
                         Users log in to see their tenant-specific leads with optional primary contact information.
                         Built to learn modern React patterns and backend API design.
                     </p>
-
                     <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                         <li className="flex items-center gap-2">
                             <Lock className="h-4 w-4 text-red-600 dark:text-red-400" />
@@ -207,7 +191,6 @@ export default function Projects() {
                             3-table schema: users, leads, primary_contacts (all with tenant_id)
                         </li>
                     </ul>
-
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div
                             className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
@@ -237,15 +220,14 @@ export default function Projects() {
                 </section>
             </article>
 
-            {/* Modal Overlay */}
             {modalImage && (
                 <div
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
-                    onClick={() => setModalImage(null)} // Close on overlay click
+                    onClick={() => setModalImage(null)}
                 >
                     <div
                         className="relative max-h-[90vh] max-w-[90vw] overflow-auto rounded-lg bg-white p-4 shadow-xl dark:bg-gray-900"
-                        onClick={(e) => e.stopPropagation()} // Prevent close on inner click
+                        onClick={(mouseEvent) => mouseEvent.stopPropagation()}
                     >
                         <button
                             className="absolute right-2 top-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"

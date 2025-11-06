@@ -4,16 +4,12 @@ export default function Experience() {
     return (
         <div className="flex h-full w-full flex-col items-center justify-center px-6 py-12 md:px-12">
             <article className="w-full max-w-3xl space-y-10 rounded-lg bg-white p-8 shadow-lg dark:bg-black">
-                {/* Page Title */}
                 <header className="border-b border-gray-200 pb-6 dark:border-gray-700">
                     <h1 className="text-center text-3xl font-bold text-gray-900 dark:text-white sm:text-left">
                         Professional Experience
                     </h1>
                 </header>
-
-                {/* Experience Entries */}
                 <section className="space-y-12">
-                    {/* Job 1 */}
                     <div className="group">
                         <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                             <div className="flex items-center gap-2">
@@ -39,8 +35,6 @@ export default function Experience() {
                             <li>Container virtualization using Docker</li>
                         </ul>
                     </div>
-
-                    {/* Job 2 */}
                     <div className="group border-t border-gray-200 pt-10 dark:border-gray-700">
                         <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                             <div className="flex items-center gap-2">

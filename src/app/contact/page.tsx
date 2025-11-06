@@ -7,7 +7,6 @@ export default function Contact() {
     return (
         <div className="flex h-full w-full flex-col items-center justify-center px-6 py-12 md:px-12">
             <article className="w-full max-w-3xl space-y-10 rounded-lg bg-white p-8 shadow-lg dark:bg-black">
-                {/* Header with Name and Photo */}
                 <header className="flex flex-col items-center gap-6 border-b border-gray-200 pb-8 dark:border-gray-700 md:flex-row md:items-start">
                     <div className="text-center md:text-left">
                         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
@@ -18,10 +17,7 @@ export default function Contact() {
                         </p>
                     </div>
                 </header>
-
-                {/* Contact Details Grid */}
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                    {/* Left Column */}
                     <div className="space-y-6">
                         <div className="flex items-start gap-3">
                             <MapPin className="h-5 w-5 text-green-600 dark:text-green-400 mt-0.5" />
@@ -34,7 +30,6 @@ export default function Contact() {
                                 </p>
                             </div>
                         </div>
-
                         <div className="flex items-center gap-3">
                             <Mail className="h-5 w-5 text-red-600 dark:text-red-400" />
                             <a
@@ -44,7 +39,19 @@ export default function Contact() {
                                 philipp.wiedemann@bewico.com
                             </a>
                         </div>
-
+                    </div>
+                    <div className="space-y-6">
+                        <div className="flex items-center gap-3">
+                            <Globe className="h-5 w-5 text-teal-600 dark:text-teal-400" />
+                            <div>
+                                <p className="font-medium text-gray-900 dark:text-white">
+                                    Languages
+                                </p>
+                                <p className="text-sm text-gray-600 dark:text-gray-400">
+                                    German (Native), English (C1)
+                                </p>
+                            </div>
+                        </div>
                         <div className="flex items-center gap-3">
                             <Github className="h-5 w-5 text-gray-700 dark:text-gray-300" />
                             <Link
@@ -56,36 +63,8 @@ export default function Contact() {
                             </Link>
                         </div>
                     </div>
-
-                    {/* Right Column */}
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-3">
-                            <Calendar className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-                            <div>
-                                <p className="font-medium text-gray-900 dark:text-white">
-                                    Date of Birth
-                                </p>
-                                <p className="text-sm text-gray-600 dark:text-gray-400">
-                                    12.08.1997 / Heidelberg
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="flex items-center gap-3">
-                            <Globe className="h-5 w-5 text-teal-600 dark:text-teal-400" />
-                            <div>
-                                <p className="font-medium text-gray-900 dark:text-white">
-                                    Nationality & Languages
-                                </p>
-                                <p className="text-sm text-gray-600 dark:text-gray-400">
-                                    German (Native), English (C1)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                {/* CV Download */}
                 <div className="mt-10 text-center">
                     <a
                         href="/wiedemann-philipp-cv.pdf"

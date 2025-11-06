@@ -21,7 +21,7 @@ export default function Home() {
                     <p>
                         I am Philipp Wiedemann, a dedicated software developer with over four years of professional
                         experience in designing and implementing scalable solutions. I specialize in PHP (Laravel/CakePHP),
-                        TypeScript (Node.js, Prisma), and Python (Flask).
+                        TypeScript (Node.js, Prisma) and Python (Flask).
                         With strong expertise in MySQL, Elasticsearch, Docker-based containerization,
                         Git version control and automated testing.
 
