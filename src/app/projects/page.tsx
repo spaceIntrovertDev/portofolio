@@ -83,7 +83,7 @@ export default function Projects() {
                         </div>
                         <div
                             className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
-                            onClick={() => setModalImage("/projects/twitter-parser.png")}
+                            onClick={() => setModalImage("/projects/twitter-result.png")}
                         >
                             <Image
                                 src="/projects/twitter-result.png"
