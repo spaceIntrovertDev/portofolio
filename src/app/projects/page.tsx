@@ -38,7 +38,7 @@ export default function Projects() {
                             </p>
                         </div>
                         <Link
-                            href="https://github.com/yourusername/twitter-analysis"
+                            href="https://github.com/spaceIntrovertDev/twitter-data-analyzer"
                             target="_blank"
                             className="text-blue-600 hover:text-blue-800 dark:text-blue-400"
                         >
@@ -107,7 +107,7 @@ export default function Projects() {
                             </p>
                         </div>
                         <Link
-                            href="https://github.com/yourusername/programmer-chatbot"
+                            href="https://github.com/spaceIntrovertDev/code-helping-aid"
                             target="_blank"
                             className="text-blue-600 hover:text-blue-800 dark:text-blue-400"
                         >
@@ -161,7 +161,7 @@ export default function Projects() {
                             </p>
                         </div>
                         <Link
-                            href="https://github.com/yourusername/sales-dashboard"
+                            href="https://github.com/spaceIntrovertDev/lead-dashboard"
                             target="_blank"
                             className="text-blue-600 hover:text-blue-800 dark:text-blue-400"
                         >
