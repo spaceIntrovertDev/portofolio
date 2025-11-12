@@ -23,15 +23,15 @@ A modern, responsive personal portfolio built with **Next.js 14 (App Router)**, 
 
 ## Tech Stack
 
-| Category         | Technologies |
-|------------------|------------|
-| Framework        | Next.js 14 (App Router) |
-| Language         | TypeScript, React 18 |
-| Styling          | Tailwind CSS |
-| Icons            | Lucide React |
-| Deployment       | Vercel |
-| Image Optimization | Next/Image |
-| Modal & State    | React hooks (useState, useEffect) |
+| Category           | Technologies                      |
+| ------------------ | --------------------------------- |
+| Framework          | Next.js 14 (App Router)           |
+| Language           | TypeScript, React 18              |
+| Styling            | Tailwind CSS                      |
+| Icons              | Lucide React                      |
+| Deployment         | Vercel                            |
+| Image Optimization | Next/Image                        |
+| Modal & State      | React hooks (useState, useEffect) |
 
 ## Quick Start
 
@@ -46,3 +46,4 @@ npm install
 # Run locally
 npm run dev
 # Open http://localhost:3000
+```

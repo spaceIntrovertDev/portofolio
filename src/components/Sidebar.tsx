@@ -2,84 +2,65 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 interface SidebarProps {
-    isMobile: boolean;
+  isMobile: boolean;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isMobile }) => {
-    const pathname = usePathname();
+  const pathname = usePathname();
+  const navRef = useRef<HTMLElement>(null);
 
-    const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => pathname === path;
 
-    return (
-        <nav
-            className={`flex ${
-                isMobile ? "flex-row justify-around space-x-4" : "flex-col space-y-4"
-            }`}
+  useEffect(() => {
+    if (!isMobile || !navRef.current) return;
+
+    const updateHeight = () => {
+      const height = navRef.current!.offsetHeight;
+      document.documentElement.style.setProperty(
+        "--mobile-nav-height",
+        `${height}px`,
+      );
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, [isMobile]);
+
+  return (
+    <nav
+      ref={navRef}
+      className={`flex ${
+        isMobile
+          ? "flex-row flex-wrap justify-center gap-x-3 gap-y-2 py-2"
+          : "flex-col space-y-4"
+      }`}
+    >
+      {isMobile ? null : <h2 className="text-lg font-bold mb-4">Navigation</h2>}
+      {[
+        { href: "/", label: "Home" },
+        { href: "/experience", label: "Experience" },
+        { href: "/education", label: "Education" },
+        { href: "/skills", label: "Skills" },
+        { href: "/projects", label: "Projects" },
+        { href: "/contact", label: "Contact" },
+        { href: "/about", label: "About This Site" },
+      ].map(({ href, label }) => (
+        <Link
+          key={href}
+          href={href}
+          className={`hover:text-gray-300 transition-colors ${
+            isActive(href) ? "font-semibold text-white" : ""
+          } ${isMobile ? "text-sm px-3 py-1.5 rounded-md bg-gray-700" : ""}`}
         >
-            {isMobile ? null : (
-                <h2 className="text-lg font-bold mb-4">Navigation</h2>
-            )}
-            <Link
-                href="/"
-                className={`hover:text-gray-300 ${isActive("/") ? "font-semibold text-white" : ""} ${
-                    isMobile ? "text-sm px-2 py-1" : ""
-                }`}
-            >
-                Home
-            </Link>
-            <Link
-                href="/experience"
-                className={`hover:text-gray-300 ${isActive("/experience") ? "font-semibold text-white" : ""} ${
-                    isMobile ? "text-sm px-2 py-1" : ""
-                }`}
-            >
-                Experience
-            </Link>
-            <Link
-                href="/education"
-                className={`hover:text-gray-300 ${isActive("/education") ? "font-semibold text-white" : ""} ${
-                    isMobile ? "text-sm px-2 py-1" : ""
-                }`}
-            >
-                Education
-            </Link>
-            <Link
-                href="/skills"
-                className={`hover:text-gray-300 ${isActive("/skills") ? "font-semibold text-white" : ""} ${
-                    isMobile ? "text-sm px-2 py-1" : ""
-                }`}
-            >
-                Skills
-            </Link>
-            <Link
-                href="/projects"
-                className={`hover:text-gray-300 ${isActive("/projects") ? "font-semibold text-white" : ""} ${
-                    isMobile ? "text-sm px-2 py-1" : ""
-                }`}
-            >
-                Projects
-            </Link>
-            <Link
-                href="/contact"
-                className={`hover:text-gray-300 ${isActive("/contact") ? "font-semibold text-white" : ""} ${
-                    isMobile ? "text-sm px-2 py-1" : ""
-                }`}
-            >
-                Contact
-            </Link>
-            <Link
-                href="/about"
-                className={`hover:text-gray-300 ${isActive("/about") ? "font-semibold text-white" : ""} ${
-                    isMobile ? "text-sm px-2 py-1" : ""
-                }`}
-            >
-                About This Site
-            </Link>
-        </nav>
-    );
+          {label}
+        </Link>
+      ))}
+    </nav>
+  );
 };
 
 export default Sidebar;
