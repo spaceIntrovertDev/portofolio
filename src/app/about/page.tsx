@@ -6,7 +6,9 @@ import {
   Lightbulb,
   ArrowRight,
   Smartphone,
+  Github,
 } from "lucide-react";
+import Link from "next/link";
 
 const currentYear: string = new Date().getFullYear().toString();
 
@@ -165,6 +167,16 @@ export default function AboutPortfolio() {
           </div>
         </section>
         <hr className="border-gray-200 dark:border-gray-700" />
+        <div className="flex items-center gap-3">
+          <Github className="h-5 w-5 text-gray-700 dark:text-gray-300" />
+          <Link
+            href={`https://github.com/spaceIntrovertDev/portofolio`}
+            target="_blank"
+            className="text-gray-900 dark:text-white hover:underline"
+          >
+            GitHub Repository of this Website
+          </Link>
+        </div>
         <footer className="pt-6 text-center text-sm text-gray-500 dark:text-gray-400">
           {`Built with care by Philipp Wiedemann — ${currentYear}`}
         </footer>
