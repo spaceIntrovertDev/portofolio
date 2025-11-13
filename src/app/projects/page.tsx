@@ -41,6 +41,78 @@ export default function Projects() {
           <div className="flex items-start justify-between">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                Multi-Tenant Sales Dashboard
+              </h2>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                Next.js, React, TypeScript, Python, Flask, SQLite, SQLAlchemy,
+                JWT
+              </p>
+            </div>
+            <Link
+              href="https://github.com/spaceIntrovertDev/lead-dashboard"
+              target="_blank"
+              className="text-blue-600 hover:text-blue-800 dark:text-blue-400"
+            >
+              <Github className="h-5 w-5" />
+            </Link>
+          </div>
+          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+            A full-stack, multi-tenant sales dashboard with secure login. Users
+            log in to see their tenant-specific leads with optional primary
+            contact information. Built to learn modern React patterns and
+            backend API design.
+          </p>
+          <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li className="flex items-center gap-2">
+              <Lock className="h-4 w-4 text-red-600 dark:text-red-400" />
+              JWT-based authentication with tenant isolation
+            </li>
+            <li className="flex items-center gap-2">
+              <Layers className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
+              Frontend: Next.js + React + TypeScript
+            </li>
+            <li className="flex items-center gap-2">
+              <Database className="h-4 w-4 text-teal-600 dark:text-teal-400" />
+              Backend: Python + Flask + SQLAlchemy + SQLite
+            </li>
+            <li className="flex items-center gap-2">
+              <Code2 className="h-4 w-4 text-green-600 dark:text-green-400" />
+              3-table schema: users, leads, primary_contacts (all with
+              tenant_id)
+            </li>
+          </ul>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div
+              className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
+              onClick={() => setModalImage("/projects/sales-login.png")}
+            >
+              <Image
+                src="/projects/sales-login.png"
+                alt="Login Page"
+                width={600}
+                height={400}
+                className="h-full w-full object-cover transition-transform hover:scale-105"
+              />
+            </div>
+            <div
+              className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
+              onClick={() => setModalImage("/projects/sales-dashboard.png")}
+            >
+              <Image
+                src="/projects/sales-dashboard.png"
+                alt="Leads Dashboard"
+                width={600}
+                height={400}
+                className="h-full w-full object-cover transition-transform hover:scale-105"
+              />
+            </div>
+          </div>
+        </section>
+        <hr className="border-gray-200 dark:border-gray-700" />
+        <section className="space-y-6">
+          <div className="flex items-start justify-between">
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
                 Twitter Data Analysis Pipeline
               </h2>
               <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
@@ -159,77 +231,6 @@ export default function Projects() {
               height={500}
               className="w-full transition-transform hover:scale-105"
             />
-          </div>
-        </section>
-        <hr className="border-gray-200 dark:border-gray-700" />
-        <section className="space-y-6">
-          <div className="flex items-start justify-between">
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                Multi-Tenant Sales Dashboard
-              </h2>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                Next.js, React, TypeScript, Flask, SQLite, SQLAlchemy, JWT
-              </p>
-            </div>
-            <Link
-              href="https://github.com/spaceIntrovertDev/lead-dashboard"
-              target="_blank"
-              className="text-blue-600 hover:text-blue-800 dark:text-blue-400"
-            >
-              <Github className="h-5 w-5" />
-            </Link>
-          </div>
-          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
-            A full-stack, multi-tenant sales dashboard with secure login. Users
-            log in to see their tenant-specific leads with optional primary
-            contact information. Built to learn modern React patterns and
-            backend API design.
-          </p>
-          <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-            <li className="flex items-center gap-2">
-              <Lock className="h-4 w-4 text-red-600 dark:text-red-400" />
-              JWT-based authentication with tenant isolation
-            </li>
-            <li className="flex items-center gap-2">
-              <Layers className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
-              Frontend: Next.js + React + TypeScript
-            </li>
-            <li className="flex items-center gap-2">
-              <Database className="h-4 w-4 text-teal-600 dark:text-teal-400" />
-              Backend: Flask + SQLAlchemy + SQLite
-            </li>
-            <li className="flex items-center gap-2">
-              <Code2 className="h-4 w-4 text-green-600 dark:text-green-400" />
-              3-table schema: users, leads, primary_contacts (all with
-              tenant_id)
-            </li>
-          </ul>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div
-              className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
-              onClick={() => setModalImage("/projects/sales-login.png")}
-            >
-              <Image
-                src="/projects/sales-login.png"
-                alt="Login Page"
-                width={600}
-                height={400}
-                className="h-full w-full object-cover transition-transform hover:scale-105"
-              />
-            </div>
-            <div
-              className="cursor-pointer overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
-              onClick={() => setModalImage("/projects/sales-dashboard.png")}
-            >
-              <Image
-                src="/projects/sales-dashboard.png"
-                alt="Leads Dashboard"
-                width={600}
-                height={400}
-                className="h-full w-full object-cover transition-transform hover:scale-105"
-              />
-            </div>
           </div>
         </section>
       </article>
