@@ -170,7 +170,7 @@ export default function AboutPortfolio() {
         <div className="flex items-center gap-3">
           <Github className="h-5 w-5 text-gray-700 dark:text-gray-300" />
           <Link
-            href={`https://github.com/spaceIntrovertDev/portofolio`}
+            href={`https://github.com/spaceIntrovertDev/portfolio`}
             target="_blank"
             className="text-gray-900 dark:text-white hover:underline"
           >
